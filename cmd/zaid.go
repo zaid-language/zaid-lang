@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zaid-language/zaid/log"
-	"github.com/zaid-language/zaid/repl"
-	"github.com/zaid-language/zaid/version"
-	"github.com/zaid-language/zaid/zaid"
+	"github.com/zaid-language/zaid-lang/log"
+	"github.com/zaid-language/zaid-lang/repl"
+	"github.com/zaid-language/zaid-lang/version"
+	"github.com/zaid-language/zaid-lang/zaid"
 )
 
 var (
@@ -58,7 +58,7 @@ func main() {
 	args := flag.Args()
 
 	if len(args) == 0 {
-		fmt.Printf("github.com/zaid-language/zaid (%s)\n", version.Version)
+		fmt.Printf("github.com/zaid-language/zaid-lang (%s)\n", version.Version)
 		fmt.Printf("Press Ctrl + C to exit\n\n")
 
 		repl.Start(os.Stdin, os.Stdout)

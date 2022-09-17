@@ -1,6 +1,6 @@
 # The zaidlang Programming Language
 
-[![Test](https://github.com/zaid-language/zaid/actions/workflows/test.yml/badge.svg)](https://github.com/zaid-language/zaid/actions/workflows/test.yml)
+[![Test](https://github.com/zaid-language/zaid-lang/actions/workflows/test.yml/badge.svg)](https://github.com/zaid-language/zaid-lang/actions/workflows/test.yml)
 
 zaidlang is a small, object-oriented, embeddable toy scripting language. While object-oriented, zaidlang also supports procedural and functional programming styles as well.
 
@@ -16,7 +16,7 @@ You will find robust, user friendly, and updated documentation on our [website](
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zaid-language/zaid/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/zaid-language/zaid-lang/tags).
 
 ## Installation
 
@@ -39,7 +39,7 @@ go install zaidlang
 
 ### Direct Download
 
-You may download the compiled binaries for your platform from our GitHub [releases](https://github.com/zaid-language/zaid/releases) page.
+You may download the compiled binaries for your platform from our GitHub [releases](https://github.com/zaid-language/zaid-lang/releases) page.
 
 ## Development
 

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/zaid-language/zaid/evaluator"
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/parser"
-	"github.com/zaid-language/zaid/scanner"
+	"github.com/zaid-language/zaid-lang/evaluator"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/parser"
+	"github.com/zaid-language/zaid-lang/scanner"
 )
 
 func benchmarkCommand() {
@@ -22,7 +22,7 @@ func benchmarkHelloWorld() {
 	fmt.Println("Hello world benchmark")
 	fmt.Println("==============================")
 	fmt.Printf("Golang:             %s\n", goTime)
-	fmt.Printf("github.com/zaid-language/zaid:          %s\n", zaidTime)
+	fmt.Printf("github.com/zaid-language/zaid-lang:          %s\n", zaidTime)
 	fmt.Printf("-- Scanner:     %s\n", scanTime)
 	fmt.Printf("-- Parser:      %s\n", parseTime)
 	fmt.Printf("-- Interpreter: %s\n", interpretTime)

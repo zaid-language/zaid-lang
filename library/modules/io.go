@@ -6,8 +6,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/token"
 )
 
 var IoMethods = map[string]*object.LibraryFunction{}

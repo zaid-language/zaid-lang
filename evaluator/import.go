@@ -7,12 +7,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/zaid-language/zaid/ast"
-	"github.com/zaid-language/zaid/log"
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/parser"
-	"github.com/zaid-language/zaid/scanner"
-	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid-lang/ast"
+	"github.com/zaid-language/zaid-lang/log"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/parser"
+	"github.com/zaid-language/zaid-lang/scanner"
+	"github.com/zaid-language/zaid-lang/token"
 )
 
 var searchPaths []string

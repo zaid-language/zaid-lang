@@ -3,7 +3,7 @@ package object
 import (
 	"io"
 
-	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid-lang/ast"
 )
 
 const FUNCTION = "FUNCTION"

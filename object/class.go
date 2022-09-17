@@ -1,6 +1,6 @@
 package object
 
-import "github.com/zaid-language/zaid/ast"
+import "github.com/zaid-language/zaid-lang/ast"
 
 const CLASS = "CLASS"
 

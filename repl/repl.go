@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zaid-language/zaid/log"
-	"github.com/zaid-language/zaid/zaid"
+	"github.com/zaid-language/zaid-lang/log"
+	"github.com/zaid-language/zaid-lang/zaid"
 
 	"github.com/peterh/liner"
 )

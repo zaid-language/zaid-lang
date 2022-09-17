@@ -1,8 +1,8 @@
 package object
 
 import (
-	"github.com/zaid-language/zaid/ast"
-	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid-lang/ast"
+	"github.com/zaid-language/zaid-lang/token"
 )
 
 var evaluator func(node ast.Node, scope *Scope) Object

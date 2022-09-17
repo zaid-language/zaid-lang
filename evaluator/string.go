@@ -1,8 +1,8 @@
 package evaluator
 
 import (
-	"github.com/zaid-language/zaid/ast"
-	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid-lang/ast"
+	"github.com/zaid-language/zaid-lang/object"
 )
 
 func evaluateString(node *ast.String, scope *object.Scope) object.Object {

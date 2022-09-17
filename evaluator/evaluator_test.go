@@ -3,9 +3,9 @@ package evaluator
 import (
 	"testing"
 
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/parser"
-	"github.com/zaid-language/zaid/scanner"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/parser"
+	"github.com/zaid-language/zaid-lang/scanner"
 )
 
 func TestErrorHandling(t *testing.T) {

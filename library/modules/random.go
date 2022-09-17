@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/token"
 
 	"github.com/shopspring/decimal"
 )

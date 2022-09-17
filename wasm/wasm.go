@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"syscall/js"
 
-	"github.com/zaid-language/zaid/evaluator"
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/parser"
-	"github.com/zaid-language/zaid/scanner"
+	"github.com/zaid-language/zaid-lang/evaluator"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/parser"
+	"github.com/zaid-language/zaid-lang/scanner"
 )
 
 func zaid(this js.Value, i []js.Value) interface{} {

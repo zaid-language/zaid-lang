@@ -1,6 +1,6 @@
 package ast
 
-import "github.com/zaid-language/zaid/token"
+import "github.com/zaid-language/zaid-lang/token"
 
 type Call struct {
 	ExpressionNode

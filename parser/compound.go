@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid-lang/ast"
 )
 
 func (parser *Parser) compoundExpression(left ast.ExpressionNode) ast.ExpressionNode {

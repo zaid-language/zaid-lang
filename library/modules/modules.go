@@ -1,8 +1,8 @@
 package modules
 
 import (
-	"github.com/zaid-language/zaid/ast"
-	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid-lang/ast"
+	"github.com/zaid-language/zaid-lang/object"
 )
 
 var evaluate func(node ast.Node, scope *object.Scope) object.Object

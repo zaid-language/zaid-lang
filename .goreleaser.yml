@@ -41,7 +41,7 @@ brews:
     commit_author:
       name: goreleaserbot
       email: goreleaser@carlosbecker.com
-    description: "https://github.com/zaid-language/zaid"
+    description: "https://github.com/zaid-language/zaid-lang"
     dependencies:
       - git
       - zsh

@@ -1,9 +1,9 @@
 package evaluator
 
 import (
-	"github.com/zaid-language/zaid/ast"
-	"github.com/zaid-language/zaid/object"
-	"github.com/zaid-language/zaid/value"
+	"github.com/zaid-language/zaid-lang/ast"
+	"github.com/zaid-language/zaid-lang/object"
+	"github.com/zaid-language/zaid-lang/value"
 )
 
 func evaluatePrefix(node *ast.Prefix, scope *object.Scope) object.Object {

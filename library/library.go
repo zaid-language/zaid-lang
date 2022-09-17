@@ -1,9 +1,9 @@
 package library
 
 import (
-	"github.com/zaid-language/zaid/library/functions"
-	"github.com/zaid-language/zaid/library/modules"
-	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid-lang/library/functions"
+	"github.com/zaid-language/zaid-lang/library/modules"
+	"github.com/zaid-language/zaid-lang/object"
 )
 
 var Functions = map[string]*object.LibraryFunction{}
