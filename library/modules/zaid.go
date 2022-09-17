@@ -5,11 +5,11 @@ import (
 	"plugin"
 	"strings"
 
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/parser"
-	"zaidlang.tech/x/zaid/scanner"
-	"zaidlang.tech/x/zaid/token"
-	"zaidlang.tech/x/zaid/version"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/parser"
+	"github.com/zaid-language/zaid/scanner"
+	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid/version"
 )
 
 var ZaidMethods = map[string]*object.LibraryFunction{}

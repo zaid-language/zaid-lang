@@ -3,7 +3,7 @@ package scanner
 import (
 	"testing"
 
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/token"
 )
 
 func TestScanTokens(t *testing.T) {

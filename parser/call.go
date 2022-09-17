@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"zaidlang.tech/x/zaid/ast"
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid/token"
 )
 
 func (parser *Parser) callExpression(callee ast.ExpressionNode) ast.ExpressionNode {

@@ -3,9 +3,9 @@ package evaluator
 import (
 	"fmt"
 
-	"zaidlang.tech/x/zaid/ast"
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/value"
+	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/value"
 )
 
 type Evaluator func(node ast.Node, scope *object.Scope) object.Object

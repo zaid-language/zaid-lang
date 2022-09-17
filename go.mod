@@ -1,4 +1,4 @@
-module zaidlang.tech/x/zaid
+module github.com/zaid-language/zaid
 
 go 1.17
 

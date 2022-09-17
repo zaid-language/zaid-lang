@@ -1,6 +1,6 @@
 package ast
 
-import "zaidlang.tech/x/zaid/token"
+import "github.com/zaid-language/zaid/token"
 
 type If struct {
 	ExpressionNode

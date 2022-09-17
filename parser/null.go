@@ -1,6 +1,6 @@
 package parser
 
-import "zaidlang.tech/x/zaid/ast"
+import "github.com/zaid-language/zaid/ast"
 
 func (parser *Parser) nullLiteral() ast.ExpressionNode {
 	return &ast.Null{Token: parser.currentToken}

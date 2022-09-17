@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/token"
-	"zaidlang.tech/x/zaid/value"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid/value"
 )
 
 var ConsoleMethods = map[string]*object.LibraryFunction{}

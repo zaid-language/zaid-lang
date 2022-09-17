@@ -1,15 +1,15 @@
 package zaid
 
 import (
-	"zaidlang.tech/x/zaid/evaluator"
-	"zaidlang.tech/x/zaid/library"
-	"zaidlang.tech/x/zaid/library/modules"
-	"zaidlang.tech/x/zaid/log"
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/parser"
-	"zaidlang.tech/x/zaid/scanner"
-	"zaidlang.tech/x/zaid/value"
-	"zaidlang.tech/x/zaid/version"
+	"github.com/zaid-language/zaid/evaluator"
+	"github.com/zaid-language/zaid/library"
+	"github.com/zaid-language/zaid/library/modules"
+	"github.com/zaid-language/zaid/log"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/parser"
+	"github.com/zaid-language/zaid/scanner"
+	"github.com/zaid-language/zaid/value"
+	"github.com/zaid-language/zaid/version"
 )
 
 type Zaid struct {

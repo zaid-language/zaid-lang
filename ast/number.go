@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/token"
 
 	"github.com/shopspring/decimal"
 )

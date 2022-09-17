@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"zaidlang.tech/x/zaid/ast"
-	"zaidlang.tech/x/zaid/log"
+	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid/log"
 
 	"github.com/shopspring/decimal"
 )

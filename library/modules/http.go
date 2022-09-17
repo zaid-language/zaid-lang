@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"time"
 
-	"zaidlang.tech/x/zaid/log"
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/log"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/token"
 )
 
 var HttpMethods = map[string]*object.LibraryFunction{}

@@ -3,8 +3,8 @@ package parser
 import (
 	"testing"
 
-	"zaidlang.tech/x/zaid/ast"
-	"zaidlang.tech/x/zaid/scanner"
+	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid/scanner"
 )
 
 func TestAssignStatement(t *testing.T) {

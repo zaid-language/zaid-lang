@@ -3,7 +3,7 @@ package scanner
 import (
 	"fmt"
 
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/token"
 )
 
 // Scanner transforms our source code into tokens.

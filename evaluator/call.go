@@ -1,10 +1,10 @@
 package evaluator
 
 import (
-	"zaidlang.tech/x/zaid/ast"
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/token"
-	"zaidlang.tech/x/zaid/value"
+	"github.com/zaid-language/zaid/ast"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/token"
+	"github.com/zaid-language/zaid/value"
 )
 
 func evaluateCall(node *ast.Call, scope *object.Scope) object.Object {

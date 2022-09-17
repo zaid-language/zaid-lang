@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"zaidlang.tech/x/zaid/object"
-	"zaidlang.tech/x/zaid/token"
+	"github.com/zaid-language/zaid/object"
+	"github.com/zaid-language/zaid/token"
 )
 
 func Print(scope *object.Scope, tok token.Token, args ...object.Object) object.Object {
