@@ -1,6 +1,6 @@
 # The zaidlang Programming Language
 
-[![Test](https://github.com/zaid-language/zaidlang/actions/workflows/test.yml/badge.svg)](https://github.com/zaid-language/zaidlang/actions/workflows/test.yml)
+[![Test](https://github.com/zaid-language/zaid/actions/workflows/test.yml/badge.svg)](https://github.com/zaid-language/zaid/actions/workflows/test.yml)
 
 zaidlang is a small, object-oriented, embeddable toy scripting language. While object-oriented, zaidlang also supports procedural and functional programming styles as well.
 
@@ -12,7 +12,7 @@ zaidlang is dynamically typed, runs by a tree-walking interpreter, and has autom
 
 ## Documentation
 
-You will find robust, user friendly, and updated documentation on our [website](https://zaidlang.tech/docs).
+You will find robust, user friendly, and updated documentation on our [website](https://zaidlang.tech/).
 
 ## Versioning
 
