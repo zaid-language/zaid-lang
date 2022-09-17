@@ -9,7 +9,7 @@ builds:
     goarch: ["386", "amd64", "arm", "arm64"]
     env:
       - CGO_ENABLED=0
-  - dir: ./src
+  - dir: ./
     main: ./wasm
     binary: zaid
     id: "wasm"
