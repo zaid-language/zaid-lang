@@ -1,0 +1,3 @@
+example = ["one", "two", "three"]
+
+printftw(example[1])

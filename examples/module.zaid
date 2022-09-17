@@ -1,0 +1,9 @@
+import "nested/greeting"
+import Animal from "animal"
+import * from "helpers"
+
+dog = Animal.new()
+dog.speak()
+
+strUpper()
+strLower()

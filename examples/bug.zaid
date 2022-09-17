@@ -1,0 +1,8 @@
+function returnFromWhile() {
+    while (true) {
+        printftw("loop")
+        break
+    }
+}
+
+returnFromWhile()

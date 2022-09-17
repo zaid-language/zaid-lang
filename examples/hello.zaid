@@ -1,0 +1,14 @@
+printftw("hello world")
+printftw(1 + 2)
+
+if (true) {
+    printftw("true!!")
+} else {
+    printftw("false :(")
+}
+
+class Animal {
+    function speak() {
+        printftw("Animals speaks.")
+    }
+}

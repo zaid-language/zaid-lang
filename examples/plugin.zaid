@@ -1,0 +1,5 @@
+printftw("Zaid Plugin Example")
+
+Zaid.extend("./plugins/greeter.so")
+
+greet()

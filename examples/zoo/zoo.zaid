@@ -1,0 +1,12 @@
+import Animal from "animal"
+import Person from "person"
+
+class Zoo {
+    function visit() {
+        lion = Animal.new("Lion")
+        visitor = Person.new()
+
+        lion.speak()
+        visitor.speak()
+    }
+}

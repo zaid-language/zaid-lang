@@ -1,0 +1,5 @@
+class Animal {
+    function speak() {
+        printftw("> The animal speaks.")
+    }
+}

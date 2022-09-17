@@ -1,0 +1,3 @@
+name = console.read("What is your name?")
+printftw("Hello there!")
+printftw(name)

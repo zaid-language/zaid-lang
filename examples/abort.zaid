@@ -1,0 +1,16 @@
+function abort() {
+    zaid.abort("abort example failed")
+}
+
+console.log("hello")
+console.log("world")
+
+zaid.abort(null)
+
+console.log(123)
+console.log(456)
+
+abort()
+
+console.log("foo")
+console.log("bar")

@@ -1,0 +1,21 @@
+package parser
+
+import (
+	"zaidlang.tech/x/zaid/ast"
+)
+
+func (parser *Parser) compoundExpression(left ast.ExpressionNode) ast.ExpressionNode {
+	compound := &ast.Compound{
+		Token:    parser.currentToken,
+		Operator: parser.currentToken.Lexeme,
+		Left:     left,
+	}
+
+	precedence := parser.currentTokenPrecedence()
+
+	parser.readToken()
+
+	compound.Right = parser.parseExpression(precedence)
+
+	return compound
+}

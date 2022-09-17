@@ -1,0 +1,16 @@
+function foobar(x = "foo", y = "bar") {
+    printftw("foobar function called")
+    printftw(x == "foo")
+
+    if (x == "foo") {
+        printftw("x == foo")
+        return x == "foo"
+    }
+
+    printftw(x)
+    printftw(y)
+}
+
+result = foobar()
+
+printftw(result)

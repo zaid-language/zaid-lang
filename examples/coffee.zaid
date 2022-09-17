@@ -1,0 +1,21 @@
+class CoffeeMaker {
+    recipe = ""
+    function constructor(recipe = "americano") {
+        this.recipe = recipe
+    }
+
+    function setRecipe(recipe) {
+        this.recipe = recipe
+
+        // Returning 'this' allows you to chain methods
+        return this
+    }
+
+    function brew() {
+        printftw("Brewing and making your %s.".format(this.recipe))
+    }
+}
+
+maker = CoffeeMaker.new()
+
+maker.setRecipe("latte").brew()

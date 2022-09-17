@@ -1,0 +1,96 @@
+package evaluator
+
+import (
+	"zaidlang.tech/x/zaid/ast"
+	"zaidlang.tech/x/zaid/object"
+	"zaidlang.tech/x/zaid/value"
+)
+
+func evaluateAssign(node *ast.Assign, scope *object.Scope) object.Object {
+	value := Evaluate(node.Value, scope)
+
+	if isError(value) {
+		return value
+	}
+
+	switch assignment := node.Name.(type) {
+	case *ast.Identifier:
+		return evaluateIdentifierAssignment(assignment, value, scope)
+	case *ast.Index:
+		return evaluateIndexAssignment(assignment, value, scope)
+	case *ast.Property:
+		return evaluatePropertyAssignment(assignment, value, scope)
+	}
+
+	object.NewError("%d:%d:%s: runtime error: cannot assign variable to a %T", node.Token.Line, node.Token.Column, node.Token.File, node.Name)
+
+	return nil
+}
+
+func evaluateIdentifierAssignment(node *ast.Identifier, value object.Object, scope *object.Scope) object.Object {
+	switch this := scope.Self.(type) {
+	case *object.Class:
+		this.Environment.Set(node.Value, value)
+	default:
+		scope.Environment.Set(node.Value, value)
+	}
+
+	return nil
+}
+
+func evaluateIndexAssignment(node *ast.Index, assignmentValue object.Object, scope *object.Scope) object.Object {
+	left := Evaluate(node.Left, scope)
+	index := Evaluate(node.Index, scope)
+
+	switch obj := left.(type) {
+	case *object.List:
+		idx := int(index.(*object.Number).Value.IntPart())
+		elements := obj.Elements
+
+		if idx < 0 {
+			return object.NewError("%d:%d:%s: runtime error: index out of range: %d", node.Token.Line, node.Token.Column, node.Token.File, idx)
+		}
+
+		if idx >= len(elements) {
+			for i := len(elements); i <= idx; i++ {
+				elements = append(elements, value.NULL)
+			}
+
+			obj.Elements = elements
+		}
+
+		elements[idx] = assignmentValue
+	case *object.Map:
+		key, ok := index.(object.Mappable)
+
+		if !ok {
+			return object.NewError("%d:%d:%s: runtime error: unusable as a map key: %s", node.Token.Line, node.Token.Column, node.Token.File, index.Type())
+		}
+
+		hashed := key.MapKey()
+		pair := object.MapPair{Key: index, Value: assignmentValue}
+		obj.Pairs[hashed] = pair
+	}
+
+	return nil
+}
+
+func evaluatePropertyAssignment(node *ast.Property, assignmentValue object.Object, scope *object.Scope) object.Object {
+	left := Evaluate(node.Left, scope)
+
+	switch obj := left.(type) {
+	case *object.Instance:
+		obj.Environment.Set(node.Property.(*ast.Identifier).Value, assignmentValue)
+
+		return nil
+	case *object.Map:
+		key := &object.String{Value: node.Property.(*ast.Identifier).Value}
+		hashed := key.MapKey()
+		pair := object.MapPair{Key: key, Value: assignmentValue}
+		obj.Pairs[hashed] = pair
+
+		return nil
+	}
+
+	return object.NewError("%d:%d:%s: runtime error: can only assign properties to maps, got %s", node.Token.Line, node.Token.Column, node.Token.File, left.Type())
+}

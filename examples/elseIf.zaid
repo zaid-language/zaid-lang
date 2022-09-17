@@ -1,0 +1,13 @@
+direction = 'up'
+
+if (direction == 'left') {
+    printftw("left.")
+} else if (direction == 'right') {
+    printftw("right.")
+} else if (direction == 'up') {
+    printftw("up.")
+} else if (direction == 'down') {
+    printftw("down.")
+} else {
+    printftw("unknown direction")
+}

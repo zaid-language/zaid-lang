@@ -1,0 +1,8 @@
+class Beverage {
+    function serve() {
+        printftw("serving beverage...")
+    }
+}
+
+beverage = Beverage.new()
+beverage.serve()

@@ -1,0 +1,6 @@
+foo = "bar"
+three = "3".toNumber()
+
+printftw(3 * three)
+
+printftw(foo)

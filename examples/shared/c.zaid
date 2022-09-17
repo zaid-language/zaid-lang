@@ -1,0 +1,3 @@
+printftw("start c")
+import "a"
+printftw("end c")

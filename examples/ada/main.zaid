@@ -1,0 +1,28 @@
+import Ada from 'ada'
+import therapist from 'modules/therapist'
+
+version = '0.3'
+
+printftw("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+printftw("  Ada:   v%s".format(version))
+printftw("  Zaid: v%s".format(zaid.version))
+printftw()
+printftw("  Ada is a rudimentary AI based on ELIZA.")
+printftw("  Speak with Ada in plain English, and they will reply.")
+printftw("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+printftw()
+
+ada = Ada.new()
+
+ada.load(therapist)
+ada.greet()
+
+
+while (true) {
+    text = console.read("> ")
+        if (text == "quit") {
+        should_quit = true
+        break
+    }
+    ada.respond(text)
+}
