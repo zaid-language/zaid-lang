@@ -8,16 +8,16 @@ run:
 build: build-mac build-linux build-wasm build-windows
 
 build-mac: clean
-	@GOOS=darwin go build -trimpath -o ../dist/mac/zaid cmd/*.go
+	GOOS=darwin go build -trimpath -o ./dist/mac/zaid cmd/*.go
 
 build-linux: clean
-	@GOOS=linux go build -trimpath -o ../dist/linux/zaid cmd/*.go
+	GOOS=linux go build -trimpath -o ./dist/linux/zaid cmd/*.go
 
 build-wasm: clean
-	@GOOS=js GOARCH=wasm go build -trimpath -o ../dist/wasm/zaid.wasm wasm/wasm.go
+	GOOS=js GOARCH=wasm go build -trimpath -o ./dist/wasm/zaid.wasm wasm/wasm.go
 
 build-windows: clean
-	@GOOS=windows go build -trimpath -o ../dist/windows/zaid.exe cmd/*.go
+	GOOS=windows go build -trimpath -o ./dist/windows/zaid.exe cmd/*.go
 
 test:
 	@go test -v -race -timeout 5s `go list ./... | grep -v "/wasm"` | sed ''/PASS/s//$$(printf "\033[32mPASS\033[0m")/'' | sed ''/FAIL/s//$$(printf "\033[31mFAIL\033[0m")/''
