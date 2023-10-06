@@ -9,14 +9,6 @@ builds:
     goarch: ["386", "amd64", "arm", "arm64"]
     env:
       - CGO_ENABLED=0
-  - dir: ./
-    main: ./wasm
-    binary: zaid
-    id: "wasm"
-    goos: ["js"]
-    goarch: ["wasm"]
-    env:
-      - CGO_ENABLED=0
 archives:
   - format_overrides:
       - goos: "windows"
@@ -32,6 +24,7 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
+      - "^examples:"
       - '(?i)\breadme\b'
 brews:
   - name: zaid

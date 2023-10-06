@@ -1,6 +1,6 @@
 module github.com/zaid-language/zaid-lang
 
-go 1.17
+go 1.21.1
 
 require (
 	github.com/peterh/liner v1.2.1
