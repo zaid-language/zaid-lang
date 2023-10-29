@@ -26,6 +26,7 @@ var keywords = map[string]token.Type{
 	"class":    token.CLASS,
 	"continue": token.CONTINUE,
 	"else":     token.ELSE,
+	"default":  token.DEFAULT,
 	"extends":  token.EXTENDS,
 	"false":    token.FALSE,
 	"for":      token.FOR,
@@ -98,12 +99,16 @@ func (scanner *Scanner) ScanToken() token.Token {
 	case rune('-'):
 		if scanner.match('=') {
 			scannedToken = scanner.newToken(token.MINUSEQUAL, "-=", 2)
+		} else if scanner.match('-') {
+			scannedToken = scanner.newToken(token.MINUSMINUS, "--", 2)
 		} else {
 			scannedToken = scanner.newToken(token.MINUS, "-", 1)
 		}
 	case rune('+'):
 		if scanner.match('=') {
 			scannedToken = scanner.newToken(token.PLUSEQUAL, "+=", 2)
+		} else if scanner.match('+') {
+			scannedToken = scanner.newToken(token.PLUSPLUS, "++", 2)
 		} else {
 			scannedToken = scanner.newToken(token.PLUS, "+", 1)
 		}
@@ -377,7 +382,7 @@ func isEmpty(character rune) bool {
 
 // isIdentifier tells us if the passed character can be used in a valid identifier.
 func isIdentifier(character rune) bool {
-	return !isDigit(character) && !isWhitespace(character) && !isBrace(character) && !isBracket(character) && !isParenthesis(character) && !isOperator(character) && !isCompound(character) && !isComparison(character) && !isEmpty(character)
+	return !isWhitespace(character) && !isBrace(character) && !isBracket(character) && !isParenthesis(character) && !isOperator(character) && !isCompound(character) && !isComparison(character) && !isEmpty(character)
 }
 
 // lookupIdentifier looks up the string in the list of keywords and returns its

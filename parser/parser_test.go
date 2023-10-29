@@ -438,6 +438,44 @@ func TestPrefixExpressions(t *testing.T) {
 	}
 }
 
+func TestPostfixExpressions(t *testing.T) {
+	tests := []struct {
+		input    string
+		operator string
+	}{
+		{"index++", "++"},
+		{"index--", "--"},
+	}
+
+	for _, tt := range tests {
+		scanner := scanner.New(tt.input, "test.zaid")
+		parser := New(scanner)
+		program := parser.Parse()
+
+		failIfParserHasErrors(t, parser)
+
+		if len(program.Statements) != 2 {
+			t.Fatalf("program.Statements does not contain 2 statements. got=%d", len(program.Statements))
+		}
+
+		statement, ok := program.Statements[1].(*ast.Expression)
+
+		if !ok {
+			t.Fatalf("program.Statements[1] is not ast.Expression. got=%T", program.Statements[0])
+		}
+
+		postfix, ok := statement.Expression.(*ast.Postfix)
+
+		if !ok {
+			t.Fatalf("statement is not ast.Postfix. got=%T", statement.Expression)
+		}
+
+		if postfix.Operator != tt.operator {
+			t.Fatalf("postfix.Operator is not '%s'. got=%s", tt.operator, postfix.Operator)
+		}
+	}
+}
+
 func TestStringLiteral(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -721,4 +759,99 @@ func isNumberLiteral(t *testing.T, expression ast.ExpressionNode, value int64) b
 	}
 
 	return true
+}
+
+func TestSwitchStatements(t *testing.T) {
+	input := `switch (value) {
+		case 1 {
+			printftw('one')
+		}
+		case 2 {
+			printftw('two')
+		}
+	}`
+
+	scanner := scanner.New(input, "test.zaid")
+	parser := New(scanner)
+	program := parser.Parse()
+
+	failIfParserHasErrors(t, parser)
+
+	statement, ok := program.Statements[0].(*ast.Expression)
+
+	if !ok {
+		t.Fatalf("program.Statements[0] is not ast.Expression. got=%T", program.Statements[0])
+	}
+
+	switchStatement, ok := statement.Expression.(*ast.Switch)
+
+	if !ok {
+		t.Fatalf("statement is not ast.Switch. got=%T", statement.Expression)
+	}
+
+	if len(switchStatement.Cases) != 2 {
+		t.Fatalf("switchStatement.Cases has wrong length. got=%d", len(switchStatement.Cases))
+	}
+}
+
+func TestSwitchStatementsWithDefault(t *testing.T) {
+	input := `switch (value) {
+		case 1 {
+			printftw('one')
+		}
+		case 2 {
+			printftw('two')
+		}
+		default {
+			printftw('default')
+		}
+	}`
+
+	scanner := scanner.New(input, "test.zaid")
+	parser := New(scanner)
+	program := parser.Parse()
+
+	failIfParserHasErrors(t, parser)
+
+	statement, ok := program.Statements[0].(*ast.Expression)
+
+	if !ok {
+		t.Fatalf("program.Statements[0] is not ast.Expression. got=%T", program.Statements[0])
+	}
+
+	switchStatement, ok := statement.Expression.(*ast.Switch)
+
+	if !ok {
+		t.Fatalf("statement is not ast.Switch. got=%T", statement.Expression)
+	}
+
+	if len(switchStatement.Cases) != 3 {
+		t.Fatalf("switchStatement.Cases has wrong length. got=%d", len(switchStatement.Cases))
+	}
+}
+
+func TestSwitchStatementsWithMultipleDefaults(t *testing.T) {
+	input := `switch (value) {
+		case 1 {
+			printftw('one')
+		}
+		case 2 {
+			printftw('two')
+		}
+		case default {
+			printftw('default one')
+		}
+		default {
+			printftw('default two')
+		}
+	}`
+
+	scanner := scanner.New(input, "test.zaid")
+	parser := New(scanner)
+	parser.Parse()
+
+	// Expecting a parser error here for having multiple defaults
+	if len(parser.Errors()) != 1 {
+		t.Fatalf("parser should have 1 error. got=%d", len(parser.Errors()))
+	}
 }

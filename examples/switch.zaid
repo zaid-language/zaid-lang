@@ -1,25 +1,16 @@
-// value = true
-
-// switch (value) {
-//     case false {
-//         printftw("false.")
-//     }
-
-//     case true {
-//         printftw("true.")
-//     }
-// }
-
-beverage = "water"
+beverage = "tea"
 
 switch (beverage) {
-    case "water" {
-        printftw("Water is $0.75 per bottle.")
-    }
-    case "juice" {
-        printftw("Juice is $1.25 per bottle.")
-    }
-    case "coffee", "latte" {
-        printftw("Coffee and lattes are $2.75 per 12oz.")
-    }
+  case "water" {
+    printftw("Water is $0.75 per bottle.")
+  }
+  case "juice" {
+    printftw("Juice is $1.25 per bottle.")
+  }
+  case "coffee", "latte" {
+    printftw("Coffee and lattes are $2.75 per 12oz.")
+  }
+  default {
+    printftw("Unknown beverage.")
+  }
 }

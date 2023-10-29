@@ -49,7 +49,9 @@ const (
 	LESS         = "<"
 	LESSEQUAL    = "<="
 	PLUSEQUAL    = "+="
+	PLUSPLUS     = "++"
 	MINUSEQUAL   = "-="
+	MINUSMINUS   = "--"
 	STAREQUAL    = "*="
 	SLASHEQUAL   = "/="
 
@@ -66,6 +68,7 @@ const (
 	CLASS    = "class"
 	CONTINUE = "continue"
 	ELSE     = "else"
+	DEFAULT = "default"
 	EXTENDS  = "extends"
 	FALSE    = "false"
 	FOR      = "for"

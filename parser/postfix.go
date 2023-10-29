@@ -1,0 +1,10 @@
+package parser
+
+import "github.com/zaid-language/zaid-lang/ast"
+
+func (parser *Parser) postfixExpression() ast.ExpressionNode {
+	return &ast.Postfix{
+		Token:    parser.previousToken,
+		Operator: parser.currentToken.Lexeme,
+	}
+}
