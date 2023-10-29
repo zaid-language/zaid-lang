@@ -58,7 +58,7 @@ func main() {
 	args := flag.Args()
 
 	if len(args) == 0 {
-		fmt.Printf("github.com/zaid-language/zaid-lang (%s)\n", version.Version)
+		fmt.Printf("Zaid (%s)\n", version.Version)
 		fmt.Printf("Press Ctrl + C to exit\n\n")
 
 		repl.Start(os.Stdin, os.Stdout)

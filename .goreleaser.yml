@@ -28,7 +28,7 @@ changelog:
       - '(?i)\breadme\b'
 brews:
   - name: zaid
-    tap:
+    repository:
       owner: zaid-language
       name: homebrew-zaid
     commit_author:

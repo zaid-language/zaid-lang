@@ -3,6 +3,7 @@ package evaluator
 import (
 	"testing"
 
+	"github.com/zaid-language/zaid-lang/library/modules"
 	"github.com/zaid-language/zaid-lang/object"
 	"github.com/zaid-language/zaid-lang/parser"
 	"github.com/zaid-language/zaid-lang/scanner"
@@ -198,16 +199,42 @@ func TestWhileExpressions(t *testing.T) {
 	}
 }
 
+func TestClassProperties(t *testing.T) {
+	input := `
+	class Circle {
+		function constructor(area) {
+			this.area = area
+		}
+	
+		function area() {
+			return math.pi * this.area * this.area
+		}
+	}
+	test = Circle.new(10)
+	return test.area()
+	`
+
+	result := evaluate(input)
+
+	isNumberObject(t, result, 314)
+}
+
 // =============================================================================
 // Helper functions
 
 func evaluate(input string) object.Object {
-	scanner := scanner.New(input, "test.zaid")
-	parser := parser.New(scanner)
-	program := parser.Parse()
 	scope := &object.Scope{
 		Environment: object.NewEnvironment(),
 	}
+
+	evaluatorInstance := Evaluate
+
+	object.RegisterEvaluator(evaluatorInstance)
+	modules.RegisterEvaluator(evaluatorInstance)
+
+	scanner := scanner.New(input, "test.zaid")
+	parser := parser.New(scanner)
+	program := parser.Parse()
 
 	result := Evaluate(program, scope)
 

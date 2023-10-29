@@ -1,6 +1,8 @@
 package object
 
-import "github.com/zaid-language/zaid-lang/ast"
+import (
+	"github.com/zaid-language/zaid-lang/ast"
+)
 
 const CLASS = "CLASS"
 
@@ -29,7 +31,11 @@ func (class *Class) Method(method string, args []Object) (Object, bool) {
 		instance := &Instance{Class: class, Environment: NewEnclosedEnvironment(class.Environment)}
 
 		if ok := instance.Environment.Has("constructor"); ok {
-			instance.Call("constructor", args, class.Name.Token)
+			result := instance.Call("constructor", args, class.Name.Token)
+
+			if result != nil && result.Type() == ERROR {
+				return result, false
+			}
 		}
 
 		return instance, true
