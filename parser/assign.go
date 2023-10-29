@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"github.com/zaid-language/zaid-lang/ast"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/ast"
+	"zaidlang.org/x/zaid/token"
 )
 
 func (parser *Parser) assign() ast.StatementNode {

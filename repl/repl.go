@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zaid-language/zaid-lang/log"
-	"github.com/zaid-language/zaid-lang/zaid"
 	"github.com/peterh/liner"
+	"zaidlang.org/x/zaid/log"
+	"zaidlang.org/x/zaid/zaid"
 )
 
 var (

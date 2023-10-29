@@ -1,4 +1,4 @@
 package version
 
-// Version signifies the current version of github.com/zaid-language/zaid-lang.
+// Version signifies the current version of zaidlang.org/x/zaid.
 const Version = "1.0.5"

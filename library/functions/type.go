@@ -3,8 +3,8 @@ package functions
 import (
 	"strings"
 
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
 )
 
 func Type(scope *object.Scope, tok token.Token, args ...object.Object) object.Object {

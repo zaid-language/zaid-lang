@@ -4,12 +4,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
 
 	"github.com/shopspring/decimal"
 )
-
 
 var seed int64
 var randomizer *rand.Rand

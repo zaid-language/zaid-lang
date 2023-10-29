@@ -3,10 +3,10 @@ package evaluator
 import (
 	"testing"
 
-	"github.com/zaid-language/zaid-lang/library/modules"
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/parser"
-	"github.com/zaid-language/zaid-lang/scanner"
+	"zaidlang.org/x/zaid/library/modules"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/parser"
+	"zaidlang.org/x/zaid/scanner"
 )
 
 func TestErrorHandling(t *testing.T) {

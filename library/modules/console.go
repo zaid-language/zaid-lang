@@ -8,13 +8,14 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
-	"github.com/zaid-language/zaid-lang/value"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
+	"zaidlang.org/x/zaid/value"
 )
 
 var ConsoleMethods = map[string]*object.LibraryFunction{}
 var ConsoleProperties = map[string]*object.LibraryProperty{}
+
 func init() {
 	RegisterMethod(ConsoleMethods, "error", consoleError)
 	RegisterMethod(ConsoleMethods, "info", consoleInfo)

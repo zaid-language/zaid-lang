@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
 
 	"github.com/shopspring/decimal"
 )

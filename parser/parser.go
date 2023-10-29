@@ -3,9 +3,9 @@ package parser
 import (
 	"fmt"
 
-	"github.com/zaid-language/zaid-lang/ast"
-	"github.com/zaid-language/zaid-lang/scanner"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/ast"
+	"zaidlang.org/x/zaid/scanner"
+	"zaidlang.org/x/zaid/token"
 )
 
 // precedences contains a list of tokens mapped to their precedence level.

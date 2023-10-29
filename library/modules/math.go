@@ -1,8 +1,8 @@
 package modules
 
 import (
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
 
 	"github.com/shopspring/decimal"
 )
@@ -131,7 +131,6 @@ func mathTan(scope *object.Scope, tok token.Token, args ...object.Object) object
 
 	return &object.Number{Value: number.Value.Tan()}
 }
-
 
 // mathMax returns the largest number of the referenced numbers.
 func mathMax(scope *object.Scope, tok token.Token, args ...object.Object) object.Object {

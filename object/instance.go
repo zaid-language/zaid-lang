@@ -3,7 +3,7 @@ package object
 import (
 	"fmt"
 
-	"github.com/zaid-language/zaid-lang/token"
+	"zaidlang.org/x/zaid/token"
 )
 
 const INSTANCE = "INSTANCE"

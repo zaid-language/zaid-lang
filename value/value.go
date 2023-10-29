@@ -1,7 +1,7 @@
 package value
 
 import (
-	"github.com/zaid-language/zaid-lang/object"
+	"zaidlang.org/x/zaid/object"
 )
 
 var (

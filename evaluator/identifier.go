@@ -1,9 +1,9 @@
 package evaluator
 
 import (
-	"github.com/zaid-language/zaid-lang/ast"
-	"github.com/zaid-language/zaid-lang/library"
-	"github.com/zaid-language/zaid-lang/object"
+	"zaidlang.org/x/zaid/ast"
+	"zaidlang.org/x/zaid/library"
+	"zaidlang.org/x/zaid/object"
 )
 
 func evaluateIdentifier(node *ast.Identifier, scope *object.Scope) object.Object {

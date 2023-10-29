@@ -1,7 +1,7 @@
 package object
 
 import (
-	"github.com/zaid-language/zaid-lang/ast"
+	"zaidlang.org/x/zaid/ast"
 )
 
 const CLASS = "CLASS"

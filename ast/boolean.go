@@ -1,6 +1,6 @@
 package ast
 
-import "github.com/zaid-language/zaid-lang/token"
+import "zaidlang.org/x/zaid/token"
 
 type Boolean struct {
 	ExpressionNode

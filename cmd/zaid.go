@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zaid-language/zaid-lang/log"
-	"github.com/zaid-language/zaid-lang/repl"
-	"github.com/zaid-language/zaid-lang/version"
-	"github.com/zaid-language/zaid-lang/zaid"
+	"zaidlang.org/x/zaid/log"
+	"zaidlang.org/x/zaid/repl"
+	"zaidlang.org/x/zaid/version"
+	"zaidlang.org/x/zaid/zaid"
 )
 
 var (

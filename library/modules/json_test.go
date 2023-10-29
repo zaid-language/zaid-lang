@@ -3,9 +3,9 @@ package modules
 import (
 	"testing"
 
-	"github.com/zaid-language/zaid-lang/object"
-	"github.com/zaid-language/zaid-lang/token"
 	"github.com/shopspring/decimal"
+	"zaidlang.org/x/zaid/object"
+	"zaidlang.org/x/zaid/token"
 )
 
 func TestJsonDecode(t *testing.T) {

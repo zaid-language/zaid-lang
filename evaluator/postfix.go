@@ -1,9 +1,9 @@
 package evaluator
 
 import (
-	"github.com/zaid-language/zaid-lang/ast"
-	"github.com/zaid-language/zaid-lang/object"
 	"github.com/shopspring/decimal"
+	"zaidlang.org/x/zaid/ast"
+	"zaidlang.org/x/zaid/object"
 )
 
 func evaluatePostfix(node *ast.Postfix, scope *object.Scope) object.Object {

@@ -1,9 +1,9 @@
 package object
 
 import (
-	"github.com/zaid-language/zaid-lang/ast"
-	"github.com/zaid-language/zaid-lang/token"
 	"github.com/shopspring/decimal"
+	"zaidlang.org/x/zaid/ast"
+	"zaidlang.org/x/zaid/token"
 )
 
 var evaluator func(node ast.Node, scope *Scope) Object
